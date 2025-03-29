@@ -66,201 +66,237 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <!-- =======================================================
-  * Template Name: Lumia - v4.9.1
-  * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  </head>
+    <!-- Header ve Footer'ı yüklemek için fonksiyonlar -->
+  <script>
+    function loadHeader() {
+      fetch('pc-header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Header yüklenirken hata:', error));
+    }
 
-  <body>
-    <!-- ======= Header ======= -->
-    <header
-      id="header"
-      class="sticky-top fixed-top"
-      style="background-color: #fff"
-    >
-      <div
-        class="topbar fixed-top sticky-top mt-0 p-1"
-        style="background-color: #161617; padding: px"
-      >
-        <div class="container">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <span class="topbar__wrapper">
-                <li class="text-white m-2" style="list-style: none">
-                  <span class="bx bxs-envelope-open" style="
-                  color: #fec921;"></span>
-                  <a href="mailto:info@bkbambalaj.com"  style="
-                  color: #fec921; font-size: 13px;"
-                    >&nbsp info@bkbambalaj.com</a
-                  >
-                </li>
-              </span>
-            </div>
-            <div class="d-flex">
-              <a href="about.html">
-                <button
-                class="btn"
-                style="
+    function loadFooter() {
+      fetch('pc-footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
+    }
+    // Sayfa yüklendiğinde header ve footer'ı yükle
+    document.addEventListener('DOMContentLoaded', function() {
+      loadHeader();
+      loadFooter();
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59TWVR86" title="Google Tag Manager" height="0"
+      width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ======= Header ======= -->
+<header id="header" class="sticky-top fixed-top" style="background-color: #fff">
+  <div class="topbar fixed-top sticky-top mt-0 p-1" style="background-color: #161617; padding: px">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <span class="topbar__wrapper">
+            <li class="text-white m-2" style="list-style: none">
+              <span class="bx bxs-envelope-open" style="
+                color: #fec921;"></span>
+              <a href="mailto:info@bkbambalaj.com" style="
+                color: #fec921; font-size: 13px;">&nbsp info@bkbambalaj.com</a>
+            </li>
+          </span>
+        </div>
+        <div class="d-flex">
+          <a href="about.html">
+            <button class="btn" style="
                   background-color: #fec921;
                   padding: 3px 7px 3px 7px;
                   font-size: 13px;
-                "
-                onclick="changeLanguage('tr')"
-              >
-                TR</button
-              ></a>&nbsp;
-              <a href="enabout.html">
-                <button
-                class="btn"
-                style="
+                " onclick="changeLanguage('tr')">
+              TR</button></a>&nbsp;
+          <a href="enabout.html">
+            <button class="btn" style="
                   background-color: #fec921;
                   padding: 3px 7px 3px 7px;
                   font-size: 13px;
-                "
-                onclick="changeLanguage('en')"
-              >
-                EN</button
-              ></a>&nbsp;
-              <a href="pcabout.html">
-                <button
-                class="btn"
-                style="
+                " onclick="changeLanguage('en')">
+              EN</button></a>&nbsp;
+          <a href="pcabout.html">
+            <button class="btn" style="
                   background-color: #fec921;
                   padding: 3px 7px 3px 7px;
                   font-size: 13px;
-                "
-                onclick="changeLanguage('en')"
-              >
-                RU</button
-              ></a>&nbsp;
-              <a href="kyabout.html">
-                <button
-                class="btn"
-                style="
+                " onclick="changeLanguage('en')">
+              RU</button></a>&nbsp;
+          <a href="kyabout.html">
+            <button class="btn" style="
                   background-color: #fec921;
                   padding: 3px 7px 3px 7px;
                   font-size: 13px;
-                "
-                onclick="changeLanguage('en')"
-              >
-                KG</button
-              ></a>&nbsp;
-              <a href="arabout.html">
-                <button
-                class="btn"
-                style="background-color: #fec921; padding: 3px; font-size: 13px"
-                onclick="changeLanguage('ar')"
-              >
-                عربي
-              </button></a>
-            </div>
-          </div>
+                " onclick="changeLanguage('en')">
+              KG</button></a>&nbsp;
+          <a href="arabout.html">
+            <button class="btn" style="background-color: #fec921; padding: 3px; font-size: 13px"
+              onclick="changeLanguage('ar')">
+              عربي
+            </button></a>
         </div>
       </div>
-      <section
-        class="mt-0 mb-0 p-0"
-        style="border: 2px solid #fec921"
-      ></section>
-      <div
-        class="container d-flex align-items-center justify-content-center mt-2"
-      >
-        <a href="pcindex.html" class="logo"
-          ><img
-            src="assets/img/logo2.webp"
-            alt="BKB-Logo"
-            class="img-fluid"
-            width="124"
-            height="86"
-        /></a>
-        <h1 class="logo me-auto">
-          <a href="pcindex.html" style="color: #fff"></a>
-        </h1>
+    </div>
+  </div>
+  <section class="mt-0 mb-0 p-0" style="border: 2px solid #fec921"></section>
+  <div class="container d-flex align-items-center justify-content-center mt-2">
+    <a href="pcindex.html" class="logo"><img src="assets/img/logo2.webp" alt="BKB-Logo" class="img-fluid" width="124"
+        height="86" /></a>
+    <h1 class="logo me-auto">
+      <a href="pcindex.html" style="color: #fff"></a>
+    </h1>
 
-        <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li>
+          <a class="nav-link scrollto" href="pcindex.html">Главная</a>
+        </li>
+        <li><a class="nav-link scrollto active" href="pcabout.html">О нас</a></li>
+
+        <li class="nav-link dropdown">
+          <a href="pcproduct.html" class="nav-link scrollto"><span>Наша продукция</span> <i
+              class="bi bi-chevron-down" style="font-size: 15px"></i></a>
           <ul>
             <li>
-              <a class="nav-link scrollto" href="/pcindex.html">Домашняя страница</a>
+              <a href="pctekstil.html" class="nav-link scrollto">Текстильная упаковка</a>
             </li>
-            <li><a class="nav-link scrollto active" href="pcabout.html">О нас</a></li>
-
-            <li class="nav-link dropdown">
-              <a href="pcproduct.html" class="nav-link scrollto"
-                ><span>Наши продукты</span> <i class="bi bi-chevron-down" style="font-size: 15px"></i
-              ></a>
-              <ul>
-                <li>
-                  <a
-                    href="pctekstil.html"
-                    class="nav-link scrollto"
-                    >Текстильная упаковка</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="pcgida.html"
-                    class="nav-link scrollto"
-                    >Пищевая упаковка</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="pccanta.html"
-                    class="nav-link scrollto"
-                    >Сумка</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="pckare-tabanli.html"
-                    class="nav-link scrollto"
-                    >Пакеты с квадратным дном</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="pcdoypack.html"
-                    class="nav-link scrollto"
-                    >Пакеты Дойпак</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="pcyan-koruk.html"
-                    class="nav-link scrollto"
-                    >Боковые ластовицы</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="pckagit.html"
-                    class="nav-link scrollto"
-                    >Бумажная упаковка</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="pcyenilikci.html"
-                    class="nav-link scrollto"
-                    >Инновационные продукты</a
-                  >
-                </li>
-              </ul>
+            <li>
+              <a href="pcgida.html" class="nav-link scrollto">Пищевая упаковка</a>
             </li>
-            <li><a class="nav-link scrollto" href="pcuretim.html">Производство</a></li>
-            <li><a class="nav-link scrollto" href="pciletisim.html">Связаться с</a></li>
-            <li class="header-social-links d-flex align-items-center">
-              <a href="https://www.instagram.com/bkbambalaj/" target="_blank" class="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://wa.me/905434079323"target="_blank" class="whatsApp"><i class="bi bi-whatsapp"></i></i></a>
+            <li>
+              <a href="pccanta.html" class="nav-link scrollto">Сумки</a>
+            </li>
+            <li>
+              <a href="pckare-tabanli.html" class="nav-link scrollto">Пакеты с квадратным дном</a>
+            </li>
+            <li>
+              <a href="pcdoypack.html" class="nav-link scrollto">Дойпак пакеты</a>
+            </li>
+            <li>
+              <a href="pcyan-koruk.html" class="nav-link scrollto">Пакеты с боковой складкой</a>
+            </li>
+            <li>
+              <a href="pcfermuarli-torbalar.html" class="nav-link scrollto">Пакеты на молнии <span style="
+                  background-color: #fec921;
+                  color: #000;
+                  padding: 2px 6px;
+                  border-radius: 10px;
+                  font-size: 10px;
+                  font-weight: bold;
+                  margin-left: 5px;
+                  display: inline-block;
+                  vertical-align: top;
+                  position: relative;
+                  top: -8px;
+                ">Новое</span></a>
+            </li>
+            <li>
+              <a href="pcpvc.html" class="nav-link scrollto">ПВХ <span style="
+                  background-color: #fec921;
+                  color: #000;
+                  padding: 2px 6px;
+                  border-radius: 10px;
+                  font-size: 10px;
+                  font-weight: bold;
+                  margin-left: 5px;
+                  display: inline-block;
+                  vertical-align: top;
+                  position: relative;
+                  top: -8px;
+                ">Новое</span></a>
+            </li>
+            <li>
+              <a href="pckagit.html" class="nav-link scrollto">Бумажная упаковка</a>
+            </li>
+            <li>
+              <a href="pcyenilikci.html" class="nav-link scrollto">Инновационные продукты</a>
             </li>
           </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-      </div>
-    </header>
-    <section class="mt-0 mb-0 p-0" style="border: 2px solid #fec921"></section>
+        </li>
+
+        <li>
+          <a class="nav-link scrollto" href="pccpe.html">
+            ХПЭ
+            <span style="
+                background-color: #fec921;
+                color: #000;
+                padding: 2px 6px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: -8px;
+              ">Новое</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" href="pceva.html">
+            ЭВА
+            <span style="
+                background-color: #fec921;
+                color: #000;
+                padding: 2px 6px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: -8px;
+              ">Новое</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" href="pccompostable.html">
+            Компостируемые
+            <span style="
+                background-color: #fec921;
+                color: #000;
+                padding: 2px 6px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: -8px;
+              ">Новое</span>
+          </a>
+        </li>
+        <li><a class="nav-link scrollto" href="pciletisim.html">Коммуникация</a></li>
+        <li class="header-social-links d-flex align-items-center">
+          <a href="https://www.instagram.com/bkbambalaj/" target="_blank" class="Instagram" title="Instagram"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/905434079323" target="_blank" class="whatsApp" title="WhatsApp"><i
+              class="bi bi-whatsapp"></i></i></a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+  </div>
+</header>
+<section class="mt-0 mb-0 p-0" style="border: 2px solid #fec921"></section>
+<!-- End Header --> 
 
     <!-- ======= About Section ======= -->
     <section id="what-we-do" class="what-we-do">
@@ -338,127 +374,8 @@
     </main>
     <!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 footer-contact">
-              <a href="pcindex.html" class="logo"><img
-                src="assets/img/logo3.webp"
-                alt="BKB-Logo"
-                class="img-fluid"
-                width="200"
-                height="126"
-            /></a>
-            <br>
-            <br>
-            <br>
-            <br>
-
-              <p>
-                <strong style="color:#fec921;font-size: 14px;">Адрес : </strong>Altınova Соседство Fuar Улица <br />
-                Buttim Бизнес-центр <br />
-                Блок "А" 4-й этаж No: 4033 <br />
-                Osmangazi / BURSA<br /><br />
-                <span class="bx bxs-phone-call" style="
-                color: #fec921;"></span>
-                <a href="tel:+02242116266"  style="
-                color: #fec921;"
-                  >&nbsp 0224 211 62 66</a
-                ><br />
-                <span class="bx bxs-envelope-open" style="
-                color: #fec921;"></span>
-                <a href="mailto:info@bkbambalaj.com"  style="
-                color: #fec921;"
-                  >&nbsp info@bkbambalaj.com</a
-                >
-              </p>
-            </div>
-
-            <div class="col-lg-4 col-md-6 footer-links">
-              <h4>Корпоративный</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="/pcindex.html">Домашняя страница</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="pcabout.html">О нас</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="pcproduct.html">Наши продукты</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pcuretim.html">Производство</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pciletisim.html">Связаться с</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-6 footer-links">
-              <h4>Наши продукты</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="pctekstil.html">Текстильная упаковка</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pcgida.html">Пищевая упаковка</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pccanta.html">Сумка</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pckare-tabanli.html">Пакеты с квадратным дном</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="pcdoypack.html">Пакеты Дойпак</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pcyan-koruk.html">Боковые ластовицы</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pckagit.html">Бумажная упаковка</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pcyenilikci.html">Инновационные продукты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container d-md-flex py-4">
-        <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
-            &copy; <a href="https://bkbambalaj.com/" class="text-white">BKB Упаковка</a> <strong><span>2022.</span></strong
-            > Все права защищены.
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/lumia-bootstrap-business-template/ -->
-            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-          </div>
-        </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="https://www.instagram.com/bkbambalaj/" target="_blank" class="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://wa.me/905434079323" target="_blank" class="whatsApp"><i class="bi bi-whatsapp"></i></i></a>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
+    <!-- Footer için yer tutucu -->
+  <div id="footer-placeholder"></div>
 
     <a
       href="#"

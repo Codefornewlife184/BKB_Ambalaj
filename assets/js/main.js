@@ -130,26 +130,57 @@
   /**
    * Mobile nav toggle
    */
-  on("click", ".mobile-nav-toggle", function (e) {
-    select("#navbar").classList.toggle("navbar-mobile");
-    this.classList.toggle("bi-list");
-    this.classList.toggle("bi-x");
-  });
+  const mobileNavToggle = () => {
+    const mobileNavToggle = select('.mobile-nav-toggle');
+    const navbar = select('#navbar');
+
+    if (mobileNavToggle && navbar) {
+      // Toggle mobile nav
+      mobileNavToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        navbar.classList.toggle('navbar-mobile');
+        this.classList.toggle('bi-list');
+        this.classList.toggle('bi-x');
+      });
+
+      // Close mobile nav when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!navbar.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+          navbar.classList.remove('navbar-mobile');
+          mobileNavToggle.classList.add('bi-list');
+          mobileNavToggle.classList.remove('bi-x');
+        }
+      });
+
+      // Handle dropdowns
+      const dropdowns = select('.navbar .dropdown > a', true);
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function(e) {
+          if (navbar.classList.contains('navbar-mobile')) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.nextElementSibling.classList.toggle('dropdown-active');
+          }
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!navbar.contains(e.target)) {
+          const dropdowns = select('.navbar .dropdown ul', true);
+          dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('dropdown-active');
+          });
+        }
+      });
+    }
+  };
 
   /**
-   * Mobile nav dropdowns activate
+   * Initialize mobile nav
    */
-  on(
-    "click",
-    ".navbar .dropdown > a",
-    function (e) {
-      if (select("#navbar").classList.contains("navbar-mobile")) {
-        e.preventDefault();
-        this.nextElementSibling.classList.toggle("dropdown-active");
-      }
-    },
-    true
-  );
+  mobileNavToggle();
 
   /**
    * Scrool with ofset on links with a class name .scrollto

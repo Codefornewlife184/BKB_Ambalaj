@@ -44,15 +44,41 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
 
-  <!-- =======================================================
-  * Template Name: Lumia - v4.9.1
-  * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script>
+    // Header'ı yüklemek için fonksiyon
+    function loadHeader() {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Header yüklenirken hata:', error));
+    }
+
+    function loadFooter() {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Footer yüklenirken hata:', error));
+    }
+
+    // Sayfa yüklendiğinde header ve footer'ı yükle
+    document.addEventListener('DOMContentLoaded', function() {
+      loadHeader();
+      loadFooter();
+    });
+  </script>
+
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59TWVR86" title="Google Tag Manager" height="0"
+      width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- ======= Header ======= -->
   <header id="header" class="sticky-top fixed-top" style="background-color: #fff">
     <div class="topbar fixed-top sticky-top mt-0 p-1" style="background-color: #161617; padding: px">
@@ -71,31 +97,31 @@
           <div class="d-flex">
             <a href="iletisim.html">
               <button class="btn" style="
-                  background-color: #fec921;
-                  padding: 3px 7px 3px 7px;
-                  font-size: 13px;
-                " onclick="changeLanguage('tr')">
+                background-color: #fec921;
+                padding: 3px 7px 3px 7px;
+                font-size: 13px;
+              " onclick="changeLanguage('tr')">
                 TR</button></a>&nbsp;
             <a href="eniletisim.html">
               <button class="btn" style="
-                  background-color: #fec921;
-                  padding: 3px 7px 3px 7px;
-                  font-size: 13px;
-                " onclick="changeLanguage('en')">
+                background-color: #fec921;
+                padding: 3px 7px 3px 7px;
+                font-size: 13px;
+              " onclick="changeLanguage('en')">
                 EN</button></a>&nbsp;
             <a href="pciletisim.html">
               <button class="btn" style="
-                  background-color: #fec921;
-                  padding: 3px 7px 3px 7px;
-                  font-size: 13px;
-                " onclick="changeLanguage('en')">
+                background-color: #fec921;
+                padding: 3px 7px 3px 7px;
+                font-size: 13px;
+              " onclick="changeLanguage('en')">
                 RU</button></a>&nbsp;
             <a href="kyiletisim.html">
               <button class="btn" style="
-                  background-color: #fec921;
-                  padding: 3px 7px 3px 7px;
-                  font-size: 13px;
-                " onclick="changeLanguage('en')">
+                background-color: #fec921;
+                padding: 3px 7px 3px 7px;
+                font-size: 13px;
+              " onclick="changeLanguage('en')">
                 KG</button></a>&nbsp;
             <a href="ariletisim.html">
               <button class="btn" style="background-color: #fec921; padding: 3px; font-size: 13px"
@@ -111,7 +137,7 @@
       <a href="index.html" class="logo"><img src="assets/img/logo2.webp" alt="BKB-Logo" class="img-fluid" width="124"
           height="86" /></a>
       <h1 class="logo me-auto">
-        <a href="index.html"></a>
+        <a href="index.html" style="color: #fff"></a>
       </h1>
 
       <nav id="navbar" class="navbar">
@@ -122,8 +148,8 @@
           <li><a class="nav-link scrollto" href="about.html">Hakkımızda</a></li>
 
           <li class="nav-link dropdown">
-            <a href="product.html" class="nav-link scrollto"><span>Ürünlerimiz</span> <i class="bi bi-chevron-down"
-                style="font-size: 15px"></i></a>
+            <a href="product.html" class="nav-link scrollto"><span>Ürünlerimiz</span> <i
+                class="bi bi-chevron-down" style="font-size: 15px"></i></a>
             <ul>
               <li>
                 <a href="tekstil.html" class="nav-link scrollto">Tekstil Ambalajları</a>
@@ -144,19 +170,126 @@
                 <a href="yan-koruk.html" class="nav-link scrollto">Yan Körüklü Torbalar</a>
               </li>
               <li>
+                <a href="fermuarli-torbalar.html" class="nav-link scrollto">Fermuarlı Torbalar <span style="
+                  background-color: #fec921;
+                  color: #000;
+                  padding: 2px 6px;
+                  border-radius: 10px;
+                  font-size: 10px;
+                  font-weight: bold;
+                  margin-left: 5px;
+                  display: inline-block;
+                  vertical-align: top;
+                  position: relative;
+                  top: -8px;
+                ">Yeni</span></a>
+              </li>
+              <li>
+                <a href="pvc.html" class="nav-link scrollto">Pvc <span style="
+                  background-color: #fec921;
+                  color: #000;
+                  padding: 2px 6px;
+                  border-radius: 10px;
+                  font-size: 10px;
+                  font-weight: bold;
+                  margin-left: 5px;
+                  display: inline-block;
+                  vertical-align: top;
+                  position: relative;
+                  top: -8px;
+                ">Yeni</span></a>
+              </li>
+              <li>
                 <a href="kagit.html" class="nav-link scrollto">Kağıt Ambalajlar</a>
               </li>
               <li>
                 <a href="yenilikci.html" class="nav-link scrollto">Yenilikçi Ürünlerimiz</a>
               </li>
+
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="uretim.html">Üretim</a></li>
+
+          <li>
+            <a class="nav-link scrollto" href="cpe.html">
+              Cpe
+              <span style="
+                background-color: #fec921;
+                color: #000;
+                padding: 2px 6px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: -8px;
+              ">Yeni</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="eva.html">
+              Eva
+              <span style="
+                background-color: #fec921;
+                color: #000;
+                padding: 2px 6px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: -8px;
+              ">Yeni</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="compostable.html">
+              Compostable
+              <span style="
+                background-color: #fec921;
+                color: #000;
+                padding: 2px 6px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: -8px;
+              ">Yeni</span>
+            </a>
+          </li>
+          <!-- <li class="nav-link dropdown">
+            <a href="product.html" class="nav-link scrollto active"><span>Yenilikçi Ürünlerimiz</span> <i class="bi bi-chevron-down"
+                style="font-size: 15px"></i></a>
+            <ul>
+              <li>
+                <a href="fermuarli.html" class="nav-link scrollto">Fermuarlı Torbalar</a>
+              </li>
+              <li>
+                <a href="cpe.html" class="nav-link scrollto">CPE</a>
+              </li>
+              <li>
+                <a href="eva.html" class="nav-link scrollto">EVA</a>
+              </li>
+              <li>
+                <a href="compostable.html" class="nav-link scrollto">Compostable</a>
+              </li>
+              <li>
+                <a href="pvc.html" class="nav-link scrollto">PVC</a>
+              </li>
+            </ul>
+          </li> -->
           <li><a class="nav-link scrollto active" href="iletisim.html">İletişim</a></li>
           <li class="header-social-links d-flex align-items-center">
-            <a href="https://www.instagram.com/bkbambalaj/" target="_blank" class="Instagram"><i
+            <a href="https://www.instagram.com/bkbambalaj/" target="_blank" class="Instagram" title="İnstagram"><i
                 class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/905434079323" target="_blank" class="whatsApp"><i class="bi bi-whatsapp"></i></i></a>
+            <a href="https://wa.me/905434079323" target="_blank" class="whatsApp" title="WhatsApp"><i
+                class="bi bi-whatsapp"></i></i></a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -164,6 +297,7 @@
     </div>
   </header>
   <section class="mt-0 mb-0 p-0" style="border: 2px solid #fec921"></section>
+  <!-- End Header -->
 
   <!-- ======= Contact ======= -->
   <section id="what-we-do" class="what-we-do section-bg">
@@ -309,119 +443,8 @@
   </main>
   <!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 footer-contact">
-            <a href="index.html" class="logo"><img src="assets/img/logo3.webp" alt="BKB-Logo" class="img-fluid"
-                width="200" height="126" /></a>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <p>
-              <strong style="color:#fec921;font-size: 14px;">Adres : </strong>Altınova Mh. Fuar Cd. <br />
-              Buttim İş Merkezi<br />
-              A Blok 4.Kat No : 4033 <br />
-              Osmangazi / BURSA<br /><br />
-              <span class="bx bxs-phone-call" style="
-                color: #fec921;"></span>
-              <a href="tel:+02242116266" style="
-                color: #fec921;">&nbsp 0224 211 62 66</a><br />
-              <span class="bx bxs-envelope-open" style="
-                color: #fec921;"></span>
-              <a href="mailto:info@bkbambalaj.com" style="
-                color: #fec921;">&nbsp info@bkbambalaj.com</a>
-            </p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links">
-            <h4>Kurumsal</h4>
-            <ul>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="/index.html">Anasayfa</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="about.html">Hakkımızda</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="product.html">Ürünlerimiz</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="uretim.html">Üretim</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="iletisim.html">İletişim</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links">
-            <h4>Ürünlerimiz</h4>
-            <ul>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="tekstil.html">Tekstil Ambalajları</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="gida.html">Gıda Ambalajları</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="canta.html">Çanta</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="kare-tabanli.html">Kare Tabanlı Torbalar</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="doypack.html">Doypack Torbalar</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="yan-koruk.html">Yan Körüklü Torbalar</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="kagit.html">Kağıt Ambalajlar</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="yenilikci.html">Yenilikçi Ürünlerimiz</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; <a href="https://bkbambalaj.com/" class="text-white">BKB Ambalaj</a>
-          <strong><span>2022.</span></strong> Tüm Hakları Saklıdır.
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/lumia-bootstrap-business-template/ -->
-          <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.instagram.com/bkbambalaj/" target="_blank" class="Instagram"><i
-            class="bi bi-instagram"></i></a>
-        <a href="https://wa.me/905434079323" target="_blank" class="whatsApp"><i class="bi bi-whatsapp"></i></i></a>
-      </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
+  <!-- Footer için yer tutucu -->
+  <div id="footer-placeholder"></div>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>

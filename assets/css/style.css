@@ -96,7 +96,7 @@ h6 {
 
 /*--------------------------------------------------------------
 # Header
---------------------------------------------------------------*/
+--------------------------------------------------------------*/  
 #header {
   transition: all 0.5s;
   z-index: 997;
@@ -1277,10 +1277,10 @@ section {
   background-color: #fec921;
 }
 
-.portfolio-details .portfolio-info {
+/* .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(56, 64, 70, 0.08);
-}
+} */
 
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
@@ -1641,53 +1641,63 @@ section {
     transform: rotate(360deg);
   }
 }
-
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 40px 0;
-  margin-top: 70px;
+.breadcrumbs .page-header {
+  padding: 60px 0 60px 0;
+  min-height: 40vh;
+  position: relative;
+  background-color: var(--color-primary);
 }
 
-.breadcrumbs h2 {
-  font-size: 26px;
-  font-weight: 300;
+.breadcrumbs .page-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #231F20;
+  font-family: "Poppins", sans-serif;
 }
 
-.breadcrumbs ol {
+.breadcrumbs .page-header p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumbs nav {
+  background-color: #f6f6f6;
+  padding: 20px 0;
+}
+
+.breadcrumbs nav ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0;
   margin: 0;
-  font-size: 15px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-default);
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs nav ol a {
+  color: var(--color-primary);
+  transition: 0.3s;
+}
+
+.breadcrumbs nav ol a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs nav ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs nav ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #4f5a62;
+  color: var(--color-secondary);
   content: "/";
 }
 
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-
-  .breadcrumbs ol {
-    display: block;
-  }
-
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -2591,4 +2601,54 @@ video {
   padding-top: 8px;
   /* background: #fec921; */
   background: #000000;
+}
+
+/* Nav Arrow */
+.navigation .navbar-nav .nav-item .arw:before {
+  content: "\e64b";
+  font-family: "themify";
+  vertical-align: middle;
+  font-size: 8px;
+  margin-left: 2px;
+}
+.navigation .navbar-nav .nav-item.active .nav-link .arw:before,
+.navigation .navbar-nav .nav-item .nav-link:hover .arw:before {
+  content: "\e648";
+}
+
+.home-version-2 .header-sticky .navigation .navbar-nav .nav-item .nav-link {
+  padding: 20px 12px;
+}
+.main-content {
+  min-height: 600px;
+}
+
+.navigation .navbar-nav .megamenu .megamenu-lvl h3:before,
+.navigation .navbar-nav .megamenu.dropdown li.dropmenu .arw:before,
+.navigation .navbar-nav .nav-item .nav-link .arw:before {
+  content: "\e61a";
+  cursor: pointer;
+  font-family: "themify";
+  font-weight: 900;
+  font-size: 14px;
+  display: block;
+  line-height: 40px;
+  width: 35px;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.navigation .navbar-nav .megamenu .megamenu-lvl h3.minus:before,
+.navigation .navbar-nav .megamenu.dropdown li.dropmenu .minus .arw:before,
+.navigation .navbar-nav .nav-item .nav-link.minus .arw:before {
+  content: "\e622";
+  color: #f76d2b;
+}
+
+.navigation .navbar-nav .megamenu.dropdown li.dropmenu .arw {
+  position: static;
 }
